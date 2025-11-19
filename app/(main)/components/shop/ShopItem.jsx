@@ -28,7 +28,7 @@ const ShopItem = ({ data }) => {
             />
           </Box>
           <p className="pb-2 text-sm text-secondary font-medium">
-            By <span className="text-brand">{data?.brand || "shimanto"}</span>
+            By <span className="text-brand">{data?.brand || "Maskur"}</span>
           </p>
           <div className="flex justify-between items-center gap-2">
             <h4 className="text-brand font-bold text-lg">
