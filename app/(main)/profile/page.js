@@ -1,7 +1,9 @@
+
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import React from "react";
+import LogOutBtn from "../components/utils/LogOutBtn";
 
 const Profile = async () => {
   const cookie = await cookies();
@@ -20,9 +22,17 @@ const Profile = async () => {
 
   const res = await profileData();
 
+  
+
+
   if (res.message === "Token invalid") {
     return redirect("/");
   }
+
+  if(!myCookie){
+    return redirect("/")
+  }
+
   return (
     <div className="flex justify-center mt-20">
       <div className="flex flex-col justify-center text-center items-center p-3 px-10 w-fit h-100 bg-white rounded-md shadow-lg">
@@ -38,6 +48,7 @@ const Profile = async () => {
             <h3 className="bg-clip-text text-primary bg-gradient-to-l from-[#005BC4] to-[#27272A] text-xl font-bold">
               {res?.user.email}
             </h3>
+            <LogOutBtn />
           </div>
         </div>
       </div>

@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import "../globals.css";
 import { cookies } from "next/headers";
 import Footer from "./components/Footer";
+import { CartProvider } from "../context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 export const metadata = {
   title: "Nest",
@@ -12,26 +14,31 @@ export default async function RootLayout({ children }) {
   const cookie = await cookies();
   const myCookie = cookie.get("accessToken")?.value;
 
- async function profileData() {
-   const res = await fetch("https://fdr-food-api.onrender.com/api/profile", {
-     method: "GET",
-     headers: {
-       Authorization: `Bearer ${myCookie}`,
-     },
-     cache: "no-store",
-   });
-   return await res.json();
- }
+  async function profileData() {
+    const res = await fetch("https://fdr-food-api.onrender.com/api/profile", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${myCookie}`,
+      }
+    });
+    return await res.json();
+  }
 
- const res = await profileData();
+  const res = await profileData();
   const userData = res.user;
 
   return (
     <html lang="en">
       <body>
-        <Navbar userData={userData} />
-        {children}
-        <Footer/>
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+        />
+        <CartProvider>
+          <Navbar userData={userData} />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

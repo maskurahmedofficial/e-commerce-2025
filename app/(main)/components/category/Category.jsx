@@ -15,7 +15,7 @@ const Category = () => {
       setData(data);
     })();
   }, []);
-  // console.log(data)
+
 
   return (
     <>

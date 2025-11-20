@@ -37,10 +37,10 @@ const ShopItem = ({ data }) => {
                 ${(data?.discountPercentage + data?.price).toFixed(2)}
               </span>
             </h4>
-            <button className="flex items-center gap-1 px-4 py-2 bg-brand/20 text-sm font-bold text-brand rounded-md cursor-pointer hover:bg-brand/40 duration-200">
+            {/* <button className="flex items-center gap-1 px-4 py-2 bg-brand/20 text-sm font-bold text-brand rounded-md cursor-pointer hover:bg-brand/40 duration-200">
               <FaCartArrowDown />
               Add
-            </button>
+            </button> */}
           </div>
         </div>
       </Link>

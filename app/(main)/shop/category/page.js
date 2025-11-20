@@ -8,7 +8,6 @@ const page = async () => {
     cache: "no-store",
   });
   const productData = await res.json();
-  console.log(productData.products);
 
   return (
     <>

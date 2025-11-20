@@ -1,8 +1,8 @@
 import { Box, Rating } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import ShopCartBtn from "../../components/utils/ShopCartBtn";
 import RelatedCard from "../../components/shop/RelatedCard";
+import ShopCartBtn from "../../components/utils/ShopCartBtn";
 
   // =========== related data
   async function relatedData() {

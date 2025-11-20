@@ -98,7 +98,6 @@ const Navbar = async ({ userData }) => {
           >
             <FaCartPlus className="text-2xl" />
             Cart
-            <span className="size-7 rounded-full flex items-center justify-center text-white text-sm bg-brand absolute -top-4 right-6">{data?.totalProducts}</span>
           </Link>
           {userData ? (
             <Link

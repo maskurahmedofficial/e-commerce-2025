@@ -10,7 +10,7 @@ async function trendData() {
 
 const Trending = async () => {
   const data = await trendData();
-  // console.log(data);
+
 
   return (
     <>
