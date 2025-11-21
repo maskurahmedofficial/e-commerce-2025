@@ -89,7 +89,6 @@ const SignUp = () => {
             >
               LogIn
             </Link>
-            
           </div>
         </div>
       </div>
