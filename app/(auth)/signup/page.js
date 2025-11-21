@@ -38,7 +38,7 @@ const SignUp = () => {
       console.log(error);
     }
   };
-  
+
   return (
     <>
       <ToastContainer position="top-right" autoClose={2000} />
@@ -89,6 +89,7 @@ const SignUp = () => {
             >
               LogIn
             </Link>
+            
           </div>
         </div>
       </div>
