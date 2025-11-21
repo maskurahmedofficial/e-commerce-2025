@@ -91,6 +91,7 @@ const SignUp = () => {
             </Link>
           </div>
         </div>
+        ``
       </div>
     </>
   );
