@@ -33,7 +33,7 @@ const SignUp = () => {
       }
       setTimeout(() => {
         router.push("/login");
-      }, 2000);
+      }, 500);
     } catch (error) {
       console.log(error);
     }
